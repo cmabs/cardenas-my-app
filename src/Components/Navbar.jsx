@@ -14,9 +14,10 @@ export default class Navbarcom extends Component {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">    
               <Nav className="me-auto">
-                <Nav.Link href="#homepage" as={Link} to="/Homepage">Home</Nav.Link>
+                <Nav.Link href="#home" as={Link} to="/Home">Home</Nav.Link>
                 <Nav.Link href="#login"as={Link} to="/login">Login</Nav.Link>
                 <Nav.Link href="#registration" as={Link} to="/registration">Registration</Nav.Link>
+                <Nav.Link href="#loginform" as={Link} to="/LoginForm">Form</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
