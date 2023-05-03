@@ -9,7 +9,6 @@ height: 100vh;
 background-color: #e9f5f9; /* Light blue background color */
 `;
 
-
 export const Homepage = () => {
   return (
     <Container> 
