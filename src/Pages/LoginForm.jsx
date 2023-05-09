@@ -36,7 +36,6 @@ background-color:#7cc0d8; /* Lighter pink button color on hover */
 }
 `;
 
-
 function LoginPage() {
       const fields = [
         { label: "Email", type: "email", placeholder: "Enter email" },
@@ -82,4 +81,4 @@ function LoginPage() {
   };
 
   export default LoginPage;
-  
+    
