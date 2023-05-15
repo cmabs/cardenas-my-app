@@ -1,19 +1,28 @@
-const mongoose = require('mongoose');
+const router = require('express').Router();
+let Exercise = require('../models/exercise.model');
 
-const Schema = mongoose.Schema;
-
-const userSchema = new Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true,
-    trim: true,
-    minlength: 3
-  },
-}, {
-  timestamps: true,
+router.route('/').get((req, res) => {
+    Exercise.find()
+        .then(exercise => res.json(exercise))
+        .catch(err => res.status(400).json('Error' + err));
 });
 
-const User = mongoose.model('User', userSchema);
+router.route('/add').post((req, res) => {
+    const username = req.body.username;
+    const description = req.body.description;
+    const duration = Number(req.body.duration);
+    const date = Date.parse(req.body.date)
 
-module.exports = User;
+   const newExercise = new Exercise({
+        username,
+        description,
+        duration,
+        date
+   });
+
+   newExercise.save()
+    .then(() => res.json('Exercise added!'))
+    .catch(err => res.status(400).json('Error' + err));
+});
+
+module.exports = router; 
