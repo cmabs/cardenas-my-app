@@ -12,7 +12,7 @@ background-color: #e9f5f9; /* Light blue background color */
 export const Homepage = () => {
   return (
     <Container> 
-      <h1>WELCOME TO MY HOMEPAGE</h1>
+      <h1>WELCOME TO MY HOMEPAGE GWAPA/GWAPO</h1>
     </Container>
   );
 }
